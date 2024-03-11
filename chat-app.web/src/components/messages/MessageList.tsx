@@ -1,8 +1,9 @@
-import React from "react";
-
-import "./MessageList.css";
+import List from 'devextreme-react/list';
+import 'devextreme/dist/css/dx.light.css';
 import Message from "../../models/message";
 import MessageItem from "./MessageItem";
+import "./MessageItem.css";
+import "./MessageList.css";
 
 interface MessageListProps {
   messages: Message[];
@@ -10,11 +11,15 @@ interface MessageListProps {
 
 const MessageList = ({ messages }: MessageListProps) => {
   return (
-    <ul className="messages-list">
+    <List
+      className="messages-list"
+      items={messages}
+      keyExpr="id"
+    >
       {messages.map((message, idx) => (
         <MessageItem key={idx} message={message} />
       ))}
-    </ul>
+    </List>
   );
 };
 

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from 'devextreme-react/button';
+import TextBox from 'devextreme-react/text-box';
+import 'devextreme/dist/css/dx.light.css';
+import { useState } from "react";
 import "./SendMessage.css";
-
 interface SendMessageProps {
   sendMessage: (message: string) => void;
 }
@@ -11,29 +12,31 @@ interface SendMessageProps {
 function SendMessage({ sendMessage }: SendMessageProps) {
   const [message, setMessage] = useState("");
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setMessage(e.target.value);
+  const onChangeHandler = (e: any) => {
+    setMessage(e.event.target.value);
   };
 
-  const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const onSubmitHandler = () => {
     sendMessage(message);
     setMessage("");
   };
 
   return (
-    <form className="send-message" onSubmit={onSubmitHandler}>
-      <input
-        className="send-message__input"
-        onChange={onChangeHandler}
-        value={message}
-        type="text"
-        placeholder="Message Text"
-      />
-      <button className="send-message__icon" type="submit" disabled={!message}>
-        <FontAwesomeIcon icon={icon({ name: "arrow-left" })} />
-      </button>
-    </form>
+    <form className="send-message dx-widget" onSubmit={e => e.preventDefault()} >
+    <TextBox
+      className="send-message__input dx-textbox"
+      value={message}
+      onChange={onChangeHandler}
+      placeholder="Message Text"
+    />
+    <Button
+      className="send-message__icon dx-button"
+      disabled={!message}
+      onClick={onSubmitHandler}
+    >
+      <FontAwesomeIcon icon={icon({ name: "arrow-left" })} />
+    </Button>
+  </form>
   );
 }
 

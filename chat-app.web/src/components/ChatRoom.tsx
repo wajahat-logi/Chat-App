@@ -1,13 +1,12 @@
-import React, { useEffect, useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
-
-import "./ChatRoom.css";
-import UserList from "./users/UserList";
-import MessageList from "./messages/MessageList";
-import SendMessage from "./messages/SendMessage";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useRef } from "react";
 import Message from "../models/message";
 import User from "../models/user";
+import "./ChatRoom.css";
+import MessageList from "./messages/MessageList";
+import SendMessage from "./messages/SendMessage";
+import UserList from "./users/UserList";
 
 interface ChatRoomProps {
   users: User[];

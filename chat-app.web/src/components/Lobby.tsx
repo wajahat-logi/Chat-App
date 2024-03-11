@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
-
+import Button from 'devextreme-react/button';
+import Form, { Item, Label, SimpleItem } from 'devextreme-react/form';
+import TextBox from 'devextreme-react/text-box';
+import 'devextreme/dist/css/dx.light.css';
+import { useState } from "react";
 import "./Lobby.css";
+
 
 interface LobbyProps {
   joinRoom: (userName: string) => void;
@@ -11,33 +13,43 @@ interface LobbyProps {
 const Lobby = ({ joinRoom }: LobbyProps) => {
   const [userName, setUserName] = useState("");
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUserName(e.target.value);
+  const onChangeHandler = (e: any) => {
+    setUserName(e.event.target.value);
   };
 
-  const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const onSubmitHandler = () => {
     joinRoom(userName);
+    setUserName("");
   };
 
   return (
-    <div className="lobby">
-      <span className="lobby__icon">
-        <FontAwesomeIcon icon={icon({ name: "arrow-right-to-bracket" })} />
-      </span>
-      <h2 className="lobby__heading">Enter the conversation</h2>
-      <form className="lobby__frm" onSubmit={onSubmitHandler}>
-        <input
-          className="lobby__input"
-          type="text"
-          placeholder="Name"
-          onChange={onChangeHandler}
+    <Form
+      id="conversationForm"
+      colCount={2}
+      labelLocation="top"
+      className="form-container"
+
+    >
+      <Item colSpan={2} >
+        <h2>Enter the Conversation</h2>
+      </Item>
+      <SimpleItem colSpan={2} dataField="title" editorType="dxTextBox">
+        <Label text="Name" />
+        <TextBox value={userName} placeholder="Type your message here..." onChange={onChangeHandler} />
+
+      </SimpleItem>
+
+      <Item colSpan={2}>
+        <Button
+          id="confirmationBtn"
+          text="Confirmation"
+          type="success"
+          useSubmitBehavior={true}
+          className="center-align full-width-btn"
+          onClick={onSubmitHandler}
         />
-        <button className="lobby__btn" type="submit" disabled={!userName}>
-        confirmation
-        </button>
-      </form>
-    </div>
+      </Item>
+    </Form>
   );
 };
 

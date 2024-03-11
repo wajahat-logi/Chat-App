@@ -1,6 +1,5 @@
-import React from "react";
-
-import "./MessageItem.css";
+import ListItem from 'devextreme-react/list';
+import 'devextreme/dist/css/dx.light.css';
 import Message from "../../models/message";
 
 interface MessageItemProps {
@@ -9,19 +8,14 @@ interface MessageItemProps {
 
 function MessageItem({ message }: MessageItemProps) {
   return (
-    <li
-      className={
-        !message.isIncoming
-          ? "messages-list__item"
-          : "messages-list__item messages-list__item--user-message"
-      }
+    <ListItem
     >
-      <div className="messages-list__item-content">
-        <span className="messages-list__from">{message.from}</span>
-        <span className="messages-list__text">{message.text}</span>
-        <div className="messages-list__datetime">{message.sentAt}</div>
+      <div className="messages-list__item-content dx-list-item-content">
+        <span className="messages-list__from dx-list-item-content-text">{message.from}</span>
+        <span className="messages-list__text dx-list-item-content-text">{message.text}</span>
+        <div className="messages-list__datetime dx-list-item-content-text">{message.sentAt}</div>
       </div>
-    </li>
+    </ListItem>
   );
 }
 

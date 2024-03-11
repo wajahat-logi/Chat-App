@@ -1,7 +1,6 @@
-import React, { useState } from "react";
 import { HubConnectionBuilder, LogLevel } from "@microsoft/signalr";
 import 'devextreme/dist/css/dx.light.css';
-import "./fontiran.css";
+import { useState } from "react";
 import "./App.css";
 import ChatRoom from "./components/ChatRoom";
 import Lobby from "./components/Lobby";
@@ -19,7 +18,7 @@ const App = () => {
         .withUrl("http://localhost:5058/chat")
         .configureLogging(LogLevel.Information)
         .build();
-      
+
       connection.on("ReceiveMessage", (message: Message) => {
         setMessages((messages) => [...messages, message]);
       });
@@ -59,18 +58,20 @@ const App = () => {
   };
 
   return (
-    <div className="app">
-      {!connection ? (
-        <Lobby joinRoom={joinRoom} />
-      ) : (
-        <ChatRoom
-          users={users}
-          messages={messages}
-          sendMessage={sendMessage}
-          closeConnection={closeConnection}
-        />
-      )}
-    </div>
+    <>
+      <div className="app">
+        {!connection ? (
+          <Lobby joinRoom={joinRoom} />
+        ) : (
+          <ChatRoom
+            users={users}
+            messages={messages}
+            sendMessage={sendMessage}
+            closeConnection={closeConnection}
+          />
+        )}
+      </div>
+    </>
   );
 };
 
