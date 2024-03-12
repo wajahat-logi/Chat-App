@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9RWmjdjSQAF8LvV1ZRe5z4x1YoEBvCvpbXl8nEFsXsNQkGcKSlur6uDCAfGt3fNnh1SEbM0Gk9Ljge8fiLy+7A==",
+  "dgSpecHash": "UI0i6AwvESyLBe7m/xQe5n8OtW6M3AOv4biZmSwdKDZx7YzwDcv/rB7ZPQJPnHCn6kjbXFB8uF/8PQ2l4SzsBA==",
   "success": true,
-  "projectFilePath": "D:\\realtime-chat-app-main\\realtime-chat-app-main\\chat-app.api\\chat-app.api\\chat-app.api.csproj",
+  "projectFilePath": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\chat-app.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wajahat\\.nuget\\packages\\microsoft.aspnet.signalr.core\\2.4.3\\microsoft.aspnet.signalr.core.2.4.3.nupkg.sha512",
     "C:\\Users\\wajahat\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

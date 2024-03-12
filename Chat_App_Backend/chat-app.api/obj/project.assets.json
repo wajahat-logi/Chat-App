@@ -2159,11 +2159,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\realtime-chat-app-main\\realtime-chat-app-main\\chat-app.api\\chat-app.api\\chat-app.api.csproj",
+      "projectUniqueName": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\chat-app.api.csproj",
       "projectName": "chat-app.api",
-      "projectPath": "D:\\realtime-chat-app-main\\realtime-chat-app-main\\chat-app.api\\chat-app.api\\chat-app.api.csproj",
+      "projectPath": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\chat-app.api.csproj",
       "packagesPath": "C:\\Users\\wajahat\\.nuget\\packages\\",
-      "outputPath": "D:\\realtime-chat-app-main\\realtime-chat-app-main\\chat-app.api\\chat-app.api\\obj\\",
+      "outputPath": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wajahat\\AppData\\Roaming\\NuGet\\NuGet.Config",
