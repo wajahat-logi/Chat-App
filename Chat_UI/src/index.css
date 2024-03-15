@@ -1,15 +1,17 @@
 :root {
-  --gradient-color1: rgba(195, 205, 222, 1);
-  --gradient-color2: rgba(182, 199, 226, 1);
-  --chat-background-color: rgba(0, 0, 0, 0.15);
-  --color1: rgba(255, 255, 255, 0.3);
-  --color2: rgba(255, 255, 255, 0.55);
-  --color3: rgba(255, 255, 255, 1);
-  --text-color: #000;
-  --placeholder-color: #333;
-  --border-thick: 1px solid rgba(0, 0, 0, 0.75);
-  --border-thin: 1px solid rgba(0, 0, 0, 0.3);
+  --gradient-color1: #833ab4; /* Dark purple */
+  --gradient-color2: #fd1d1d; /* Red */
+  --chat-background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+  --color1: rgba(255, 255, 255, 0.7); /* White with transparency */
+  --color2: rgba(255, 255, 255, 0.9); /* White with higher transparency */
+  --color3: #ffffff; /* White */
+  --text-color: #000000; /* Black */
+  --placeholder-color: #808080; /* Gray */
+  --border-thick: 2px solid rgba(0, 0, 0, 0.5); /* Black with transparency */
+  --border-thin: 1px solid rgba(0, 0, 0, 0.2); /* Black with lower transparency */
 }
+
+
 
 *,
 *::after,

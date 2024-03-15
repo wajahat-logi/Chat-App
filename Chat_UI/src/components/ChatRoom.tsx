@@ -51,7 +51,7 @@ const ChatRoom = ({
       </div>
       <div className="chat__left">
         <div className="chat__left-header">
-          <span className="chat__heading" >List of users</span>
+          <span className="chat__heading" >List of Messages</span>
         </div>
         <div className="chat__left-main" ref={messageRef}>
           <MessageList messages={messages} />

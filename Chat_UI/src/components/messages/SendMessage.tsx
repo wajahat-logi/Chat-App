@@ -5,6 +5,9 @@ import TextBox from 'devextreme-react/text-box';
 import 'devextreme/dist/css/dx.light.css';
 import { useState } from "react";
 import "./SendMessage.css";
+
+
+
 interface SendMessageProps {
   sendMessage: (message: string) => void;
 }
