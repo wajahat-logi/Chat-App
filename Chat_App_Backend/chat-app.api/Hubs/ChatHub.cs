@@ -1,9 +1,11 @@
 ﻿using chat_app.api.Entities;
 using Microsoft.AspNetCore.SignalR;
 using chat_app.api.Utils;
+using SignalRSwaggerGen.Attributes;
 
 namespace chat_app.api.Hubs
 {
+    [SignalRHub]
     public class ChatHub : Hub
     {
         private readonly IDictionary<string, UserConnection> _userConnections;

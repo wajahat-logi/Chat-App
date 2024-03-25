@@ -56,6 +56,10 @@
             "Microsoft.AspNetCore.SignalR.Core": {
               "target": "Package",
               "version": "[1.1.0, )"
+            },
+            "SignalRSwaggerGen": {
+              "target": "Package",
+              "version": "[4.5.0, )"
             }
           },
           "imports": [

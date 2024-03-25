@@ -10,9 +10,9 @@ interface UserListProps {
 
 function UserList({ users }: UserListProps) {
   return (
-    <ul className="users-list">
+    <ul className="users-list" >
       {users.map((user, idx) => (
-        <UserItem key={idx} user={user} />
+        <UserItem key={idx} user={user} onClick={()=> alert('hello')}/>
       ))}
     </ul>
   );

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UI0i6AwvESyLBe7m/xQe5n8OtW6M3AOv4biZmSwdKDZx7YzwDcv/rB7ZPQJPnHCn6kjbXFB8uF/8PQ2l4SzsBA==",
+  "dgSpecHash": "q28uM+2h20EX8Jd/ZPHNJU901jHw5uTvfn++eVwY1YBN4Oz0MSQnJ78ZWlUCLRXBrZeuY7IH9CF0xdcyPQRrSA==",
   "success": true,
   "projectFilePath": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\chat-app.api.csproj",
   "expectedPackageFiles": [
@@ -36,10 +36,15 @@
     "C:\\Users\\wajahat\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\wajahat\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\wajahat\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\wajahat\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\wajahat\\.nuget\\packages\\microsoft.owin\\2.1.0\\microsoft.owin.2.1.0.nupkg.sha512",
     "C:\\Users\\wajahat\\.nuget\\packages\\microsoft.owin.security\\2.1.0\\microsoft.owin.security.2.1.0.nupkg.sha512",
     "C:\\Users\\wajahat\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\wajahat\\.nuget\\packages\\owin\\1.0.0\\owin.1.0.0.nupkg.sha512",
+    "C:\\Users\\wajahat\\.nuget\\packages\\signalrswaggergen\\4.5.0\\signalrswaggergen.4.5.0.nupkg.sha512",
+    "C:\\Users\\wajahat\\.nuget\\packages\\signalrswaggergen.core\\1.1.0\\signalrswaggergen.core.1.1.0.nupkg.sha512",
+    "C:\\Users\\wajahat\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.0.0\\swashbuckle.aspnetcore.swagger.6.0.0.nupkg.sha512",
+    "C:\\Users\\wajahat\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.0.0\\swashbuckle.aspnetcore.swaggergen.6.0.0.nupkg.sha512",
     "C:\\Users\\wajahat\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\wajahat\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
     "C:\\Users\\wajahat\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",

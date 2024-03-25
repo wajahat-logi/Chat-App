@@ -125,3 +125,9 @@ D:\DOTNET_REACT_CHAT_APP\Chat_App_Backend\chat-app.api\obj\Debug\net6.0\refint\c
 D:\DOTNET_REACT_CHAT_APP\Chat_App_Backend\chat-app.api\obj\Debug\net6.0\chat-app.api.pdb
 D:\DOTNET_REACT_CHAT_APP\Chat_App_Backend\chat-app.api\obj\Debug\net6.0\chat-app.api.genruntimeconfig.cache
 D:\DOTNET_REACT_CHAT_APP\Chat_App_Backend\chat-app.api\obj\Debug\net6.0\ref\chat-app.api.dll
+D:\DOTNET_REACT_CHAT_APP\Chat_App_Backend\chat-app.api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\DOTNET_REACT_CHAT_APP\Chat_App_Backend\chat-app.api\bin\Debug\net6.0\SignalRSwaggerGen.dll
+D:\DOTNET_REACT_CHAT_APP\Chat_App_Backend\chat-app.api\bin\Debug\net6.0\SignalRSwaggerGen.Core.dll
+D:\DOTNET_REACT_CHAT_APP\Chat_App_Backend\chat-app.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\DOTNET_REACT_CHAT_APP\Chat_App_Backend\chat-app.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\DOTNET_REACT_CHAT_APP\Chat_App_Backend\chat-app.api\obj\Debug\net6.0\chat-app.api.MvcApplicationPartsAssemblyInfo.cs

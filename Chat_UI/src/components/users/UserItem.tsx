@@ -4,13 +4,10 @@ import "./UserItem.css";
 import User from "../../models/user";
 import avatarMale from "../../assets/images/avatar_male.png";
 
-interface UserItemProps {
-  user: User;
-}
 
-function UserItem({ user }: UserItemProps) {
+function UserItem({ user, onClick }: any) {
   return (
-    <li className="users-list__item">
+    <li className="users-list__item" onClick={onClick}>
       <img className="users-list__img" src={avatarMale} alt="User" />
       <div className="users-list__info">
         <div className="users-list__row">
