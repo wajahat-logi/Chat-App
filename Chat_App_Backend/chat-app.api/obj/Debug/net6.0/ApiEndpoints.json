@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "ContainingType": "chat_app.api.Controller.UsersController",
+    "Method": "GetGroupList",
+    "RelativePath": "Users/GetGroupList/{user}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,8 +1,8 @@
 import Button from 'devextreme-react/button';
 import Form, { Item, Label, SimpleItem } from 'devextreme-react/form';
-import TextBox from 'devextreme-react/text-box';
+import TextBox, { TextBoxTypes } from 'devextreme-react/text-box';
 import 'devextreme/dist/css/dx.light.css';
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./Lobby.css";
 
 
@@ -13,9 +13,10 @@ interface LobbyProps {
 const Lobby = ({ joinRoom }: LobbyProps) => {
   const [userName, setUserName] = useState("");
 
-  const onChangeHandler = (e: any) => {
-    setUserName(e.event.target.value);
-  };
+  const onChangeHandler = useCallback((e: TextBoxTypes.ValueChangedEvent) => {
+    setUserName(e.value);
+  }, []);
+
 
   const onSubmitHandler = () => {
     joinRoom(userName);
@@ -28,15 +29,15 @@ const Lobby = ({ joinRoom }: LobbyProps) => {
       colCount={2}
       labelLocation="top"
       className="form-container"
-
     >
       <Item colSpan={2} >
-        <h2>Enter the Conversation</h2>
+        <h4>Enter the Conversation</h4>
       </Item>
       <SimpleItem colSpan={2} dataField="title" editorType="dxTextBox">
         <Label text="Name" />
-        <TextBox value={userName} placeholder="Type your message here..." onChange={onChangeHandler} />
-
+        <TextBox value={userName}
+          valueChangeEvent="keyup"
+          placeholder="Type your message here..." onValueChanged={onChangeHandler} />
       </SimpleItem>
 
       <Item colSpan={2}>
@@ -45,6 +46,7 @@ const Lobby = ({ joinRoom }: LobbyProps) => {
           text="Confirmation"
           type="success"
           useSubmitBehavior={true}
+          disabled={userName == ''}
           className="center-align full-width-btn"
           onClick={onSubmitHandler}
         />

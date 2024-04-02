@@ -1,0 +1,42 @@
+.label {
+    font-size: 12px;
+}
+
+.demo-container {
+    height: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    /* padding: 5px 0px 5px 3px !important; */
+
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    /* padding: 5px 0px 5px 3px !important; */
+}
+
+.dx-popup-content {
+    font-size: 12px;
+}
+
+.caption {
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;     
+}
+
+.popup-content {
+    height: 100%;
+    width: 100%;
+}

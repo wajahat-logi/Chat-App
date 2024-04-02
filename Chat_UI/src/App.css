@@ -4,3 +4,7 @@
   align-items: center; /* Center vertically */
   height: 100vh;
 }
+
+.dx-resizable{
+  top: -150px;
+}

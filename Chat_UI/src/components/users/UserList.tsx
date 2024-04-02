@@ -1,20 +1,60 @@
-import React from "react";
-
+import List, { ListTypes } from 'devextreme-react/list';
+import React, { useEffect, useState } from "react";
 import "./UserList.css";
-import User from "../../models/user";
-import UserItem from "./UserItem";
+import { Button } from 'devextreme-react';
+import AddGroupPopup from '../AddGroupPopup';
 
-interface UserListProps {
-  users: User[];
+
+
+function ItemTemplate(data: any,setuserSelectionHandler:any) {
+  return <>
+   <div onClick={()=>setuserSelectionHandler(data.name)} style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div>{data.name}</div>
+      <div>{data.joinedAt}</div>
+    </div>
+  </>;
 }
 
-function UserList({ users }: UserListProps) {
+function ItemTemplate1(data: any,setgroupSelectionHandler:any,) {
+  return <>
+   <div onClick={()=>setgroupSelectionHandler(data.group)} style={{ display: 'flex', justifyContent: 'space-between' }}>
+   {/* <div  style={{ display: 'flex', justifyContent: 'space-between' }}> */}
+      <div>{data.group}</div>
+    </div>
+  </>;
+}
+
+
+const UserList = ({ groups,users, setuserSelectionHandler,setgroupSelectionHandler,closeModal }: any) => {
+  const [searchMode, _] = useState<ListTypes.Properties['searchMode']>('contains');
+
+
+
+
+
+
   return (
-    <ul className="users-list" >
-      {users.map((user, idx) => (
-        <UserItem key={idx} user={user} onClick={()=> alert('hello')}/>
-      ))}
-    </ul>
+    <React.Fragment>
+      <div className="list-container">
+        <List
+          dataSource={users}
+          itemRender={(data)=>(ItemTemplate(data, setuserSelectionHandler))}
+          searchExpr="name"
+          searchEnabled={true}
+          searchMode={searchMode} />
+      </div>
+      <div>
+    <AddGroupPopup closeModal={closeModal} />
+      </div>
+      <div className="list-container">
+        <List
+          dataSource={groups}
+          itemRender={(data)=>(ItemTemplate1(data, setgroupSelectionHandler))}
+          searchExpr="group"
+          searchEnabled={true}
+          searchMode={searchMode} />
+      </div>
+    </React.Fragment>
   );
 }
 

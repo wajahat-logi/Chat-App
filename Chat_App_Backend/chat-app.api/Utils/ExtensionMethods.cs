@@ -11,5 +11,10 @@ namespace chat_app.api.Utils
             var pc = new PersianCalendar();
             return $"{pc.GetYear(dt)}/{pc.GetMonth(dt)}/{pc.GetDayOfMonth(dt)} {pc.GetHour(dt)}:{pc.GetMinute(dt)}:{pc.GetSecond(dt)}";
         }
+
+        public static string CurrentDate(this DateTime dt)
+        {
+            return dt.ToString();
+        }
     }
 }
