@@ -4,9 +4,9 @@ import "./UserList.css";
 
 
 
-function ItemTemplate(data: any,setuserSelectionHandler:any) {
+function ItemTemplate(data: any, setuserSelectionHandler: any) {
   return <>
-   <div onClick={setuserSelectionHandler} style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <div onClick={setuserSelectionHandler} style={{ display: 'flex', justifyContent: 'space-between' }}>
       <div>{data.name}</div>
       <div>{data.joinedAt}</div>
     </div>
@@ -20,22 +20,20 @@ const UserList = ({ users, setuserSelectionHandler }: any) => {
       <div className="list-container">
         <List
           dataSource={users}
-          // height={400}
-          itemRender={(data)=>(ItemTemplate(data, setuserSelectionHandler))}
+          itemRender={(data) => (ItemTemplate(data, setuserSelectionHandler))}
           searchExpr="name"
           searchEnabled={true}
           searchMode={searchMode} />
-        
+
       </div>
       <div className="list-container">
         <List
           dataSource={users}
-          // height={400}
-          itemRender={(data)=>(ItemTemplate(data, setuserSelectionHandler))}
+          itemRender={(data) => (ItemTemplate(data, setuserSelectionHandler))}
           searchExpr="name"
           searchEnabled={true}
           searchMode={searchMode} />
-        
+
       </div>
     </React.Fragment>
   );

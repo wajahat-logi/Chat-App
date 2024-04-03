@@ -1,7 +1,6 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { Button, TextBox } from 'devextreme-react';
 import { Popup, ToolbarItem } from 'devextreme-react/popup';
-import ScrollView from 'devextreme-react/scroll-view';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 
 export default function AddGroupPopup({ closeModal }: any) {
     const [popupVisible, setPopupVisible] = useState(false);
@@ -18,7 +17,7 @@ export default function AddGroupPopup({ closeModal }: any) {
         setMessage('');
     }, [setPopupVisible]);
 
-    const onCloseHandler = ()=>{
+    const onCloseHandler = () => {
         hide();
         closeModal(mRef.current);
     };
@@ -31,20 +30,15 @@ export default function AddGroupPopup({ closeModal }: any) {
         onClick: onCloseHandler,
     }), [hide]);
 
-    // const onChangeHandler = useCallback((e: any) => {
-        const onChangeHandler = (e: any) => {
+    const onChangeHandler = (e: any) => {
         setMessage(e.value);
         mRef.current = e.value;
-        // hide();
-        // closeModal(e.value);
-    // }, []);
-};
+    };
 
 
     return (
         <React.Fragment>
-    
-            <div style={{padding: '5px 0px 5px 3px'}} className="demo-container">
+            <div style={{ padding: '5px 0px 5px 3px' }} className="demo-container">
                 <div className="button-container">
                     <Button
                         text="Add Group"
@@ -54,7 +48,6 @@ export default function AddGroupPopup({ closeModal }: any) {
                     />
                 </div>
             </div>
-
             <Popup
                 width={360}
                 height={200}

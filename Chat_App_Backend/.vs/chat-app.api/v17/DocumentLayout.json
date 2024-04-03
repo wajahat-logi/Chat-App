@@ -15,10 +15,6 @@
       "RelativeMoniker": "D:0:0:{4B18E994-7508-4F15-B3FB-5C4EDC3FD52A}|chat-app.api\\chat-app.api.csproj|solutionrelative:chat-app.api\\entities\\groupconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\Migrations\\20240402104714_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:chat-app.api\\Migrations\\20240402104714_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4B18E994-7508-4F15-B3FB-5C4EDC3FD52A}|chat-app.api\\chat-app.api.csproj|d:\\dotnet_react_chat_app\\chat_app_backend\\chat-app.api\\hubs\\ichathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B18E994-7508-4F15-B3FB-5C4EDC3FD52A}|chat-app.api\\chat-app.api.csproj|solutionrelative:chat-app.api\\hubs\\ichathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -49,6 +45,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{4B18E994-7508-4F15-B3FB-5C4EDC3FD52A}|chat-app.api\\chat-app.api.csproj|d:\\dotnet_react_chat_app\\chat_app_backend\\chat-app.api\\chat-app.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{4B18E994-7508-4F15-B3FB-5C4EDC3FD52A}|chat-app.api\\chat-app.api.csproj|solutionrelative:chat-app.api\\chat-app.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B18E994-7508-4F15-B3FB-5C4EDC3FD52A}|chat-app.api\\chat-app.api.csproj|d:\\dotnet_react_chat_app\\chat_app_backend\\chat-app.api\\migrations\\20240402104714_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B18E994-7508-4F15-B3FB-5C4EDC3FD52A}|chat-app.api\\chat-app.api.csproj|solutionrelative:chat-app.api\\migrations\\20240402104714_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,8 +70,7 @@
               "RelativeToolTip": "chat-app.api\\Entities\\GroupConnection.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T09:29:08.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-28T09:29:08.348Z"
             },
             {
               "$type": "Document",
@@ -88,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "20240402104714_Init.cs",
               "DocumentMoniker": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\Migrations\\20240402104714_Init.cs",
               "RelativeDocumentMoniker": "chat-app.api\\Migrations\\20240402104714_Init.cs",
@@ -96,12 +95,11 @@
               "RelativeToolTip": "chat-app.api\\Migrations\\20240402104714_Init.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T10:47:14.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T10:47:14.293Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "IChatHub.cs",
               "DocumentMoniker": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\Hubs\\IChatHub.cs",
               "RelativeDocumentMoniker": "chat-app.api\\Hubs\\IChatHub.cs",
@@ -109,8 +107,7 @@
               "RelativeToolTip": "chat-app.api\\Hubs\\IChatHub.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T08:41:18.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-28T08:41:18.692Z"
             },
             {
               "$type": "Document",
@@ -122,12 +119,11 @@
               "RelativeToolTip": "chat-app.api\\Program.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAowCcAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T12:38:45.002Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-26T12:38:45.002Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "UserConnection.cs",
               "DocumentMoniker": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\Entities\\UserConnection.cs",
               "RelativeDocumentMoniker": "chat-app.api\\Entities\\UserConnection.cs",
@@ -135,12 +131,11 @@
               "RelativeToolTip": "chat-app.api\\Entities\\UserConnection.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T12:36:47.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-26T12:36:47.963Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "ApplicationDBContext.cs",
               "DocumentMoniker": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\DBContext\\ApplicationDBContext.cs",
               "RelativeDocumentMoniker": "chat-app.api\\DBContext\\ApplicationDBContext.cs",
@@ -148,12 +143,11 @@
               "RelativeToolTip": "chat-app.api\\DBContext\\ApplicationDBContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T11:11:43.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-28T11:11:43.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "IApplicationDBContext.cs",
               "DocumentMoniker": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\DBContext\\IApplicationDBContext.cs",
               "RelativeDocumentMoniker": "chat-app.api\\DBContext\\IApplicationDBContext.cs",
@@ -161,12 +155,11 @@
               "RelativeToolTip": "chat-app.api\\DBContext\\IApplicationDBContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T11:13:44.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-28T11:13:44.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "ExtensionMethods.cs",
               "DocumentMoniker": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\Utils\\ExtensionMethods.cs",
               "RelativeDocumentMoniker": "chat-app.api\\Utils\\ExtensionMethods.cs",
@@ -178,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\Controller\\UsersController.cs",
               "RelativeDocumentMoniker": "chat-app.api\\Controller\\UsersController.cs",
@@ -190,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\appsettings.json",
               "RelativeDocumentMoniker": "chat-app.api\\appsettings.json",
@@ -202,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "chat-app.api.csproj",
               "DocumentMoniker": "D:\\DOTNET_REACT_CHAT_APP\\Chat_App_Backend\\chat-app.api\\chat-app.api.csproj",
               "RelativeDocumentMoniker": "chat-app.api\\chat-app.api.csproj",

@@ -1,13 +1,8 @@
-import List, { ListTypes } from 'devextreme-react/list';
 import 'devextreme/dist/css/dx.light.css';
-import { memo, useEffect, useState } from 'react';
-import Message from "../../models/message";
+import { memo } from 'react';
 import "./MessageItem.css";
 import "./MessageList.css";
 
-interface MessageListProps {
-  messages: Message[];
-}
 
 function ItemTemplate(data: any) {
   return <>
@@ -20,9 +15,7 @@ function ItemTemplate(data: any) {
 }
 
 const MessageList = ({ gs }: any) => {
-  // const [searchMode, _] = useState<ListTypes.Properties['searchMode']>('contains');
-
-  
+  // const [searchMode, _] = useState<ListTypes.Properties['searchMode']>('contains'); // use in future
   return (
     <div className="list-container">
       {/* <List
@@ -30,7 +23,7 @@ const MessageList = ({ gs }: any) => {
         height={400}
         itemRender={(data: any) => ItemTemplate(data)}
       /> */}
-      {gs?.userMessages[gs?.receiver] && gs?.userMessages[gs?.receiver].map((e:any) => ItemTemplate(e))}
+      {gs?.userMessages[gs?.receiver] && gs?.userMessages[gs?.receiver].map((e: any) => ItemTemplate(e))}
     </div>
   );
 };

@@ -1,22 +1,13 @@
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useRef, useState } from "react";
-import Message from "../models/message";
-import User from "../models/user";
+import { useEffect, useRef } from "react";
 import "./ChatRoom.css";
+import MessageListGroup from "./groups/MessageListGroup";
+import SendMessageGroup from "./groups/SendMessageGroup";
 import MessageList from "./messages/MessageList";
 import SendMessage from "./messages/SendMessage";
 import UserList from "./users/UserList";
-import SendMessageGroup from "./groups/SendMessageGroup";
-import MessageListGroup from "./groups/MessageListGroup";
 
-interface ChatRoomProps {
-  users: User[];
-  messages: Message[];
-  sendMessage: (message: string) => void;
-  closeConnection: () => void;
-  setuserSelectionHandler: any;
-}
 
 const ChatRoom = ({
   sendMessageGroup,
@@ -33,24 +24,8 @@ const ChatRoom = ({
   setgroupSelectionHandler
 }: any) => {
 
-
   const messageRef = useRef<any>();
-
-  const getGroups = async () => {
-
-  }
-
   useEffect(() => {
-    // let conn = localStorage.getItem('connection') ;
-    // if(conn){
-    //   conn = JSON.parse(conn);
-    //   setConnection(conn);
-    //   if(users.length == 0){
-    //     const mess = localStorage.getItem('userName') || '';
-    //     refreshPage(mess,conn);
-    //   }
-    // }
-
     fetch('http://localhost:5058/Users/GetGroupList/' + connection?.connectionId || '')
       .then((res) => {
         return res.json();
@@ -90,13 +65,13 @@ const ChatRoom = ({
           </div>
         </div> : gs.selectionType == 'G' ? <div className="chat__left">
           <div className="chat__left-header">
-            <span className="chat__heading" > {`Group: ${gs.currentGroupName}` }</span>
+            <span className="chat__heading" > {`Group: ${gs.currentGroupName}`}</span>
           </div>
           <div className="chat__left-main" ref={messageRef}>
             <MessageListGroup gs={gs} />
           </div>
           <div className="chat__left-footer">
-            <SendMessageGroup messageRef={messageRef}  sendMessageGroup={sendMessageGroup} />
+            <SendMessageGroup messageRef={messageRef} sendMessageGroup={sendMessageGroup} />
           </div>
         </div> : null
       }

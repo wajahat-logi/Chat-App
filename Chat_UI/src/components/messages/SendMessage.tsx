@@ -7,11 +7,6 @@ import { useCallback, useState } from "react";
 import "./SendMessage.css";
 
 
-
-interface SendMessageProps {
-  sendMessage: (message: string) => void;
-}
-
 function SendMessage({ messageRef, sendMessage, selectedUser }: any) {
   const [message, setMessage] = useState("");
 
@@ -35,34 +30,32 @@ function SendMessage({ messageRef, sendMessage, selectedUser }: any) {
     setMessage(e.value);
   }, []);
 
-  const onKeyDownHander = (e: any)=>{
-    if(e.event.keyCode == 13){
+  const onKeyDownHander = (e: any) => {
+    if (e.event.keyCode == 13) {
       onSubmitHandler(null);
     }
   }
 
   return (
     <form className="send-message dx-widget" onSubmit={e => e.preventDefault()} >
-    <TextBox
-      className="send-message__input dx-textbox"
-      value={message}
-      placeholder="Enter Your Message..."
-      disabled={ selectedUser === ''}
-      valueChangeEvent="keyup"
-      onValueChanged={onChangeHandler}
-      onKeyDown={onKeyDownHander}
-    />
-    <Button
-      className="send-message__icon dx-button"
-      disabled={!message || selectedUser === ''}
-      onClick={onSubmitHandler}
-      style={{color: 'blue'}}
-    
-
-    >
-      <FontAwesomeIcon icon={icon({ name: "arrow-left" })} />
-    </Button>
-  </form>
+      <TextBox
+        className="send-message__input dx-textbox"
+        value={message}
+        placeholder="Enter Your Message..."
+        disabled={selectedUser === ''}
+        valueChangeEvent="keyup"
+        onValueChanged={onChangeHandler}
+        onKeyDown={onKeyDownHander}
+      />
+      <Button
+        className="send-message__icon dx-button"
+        disabled={!message || selectedUser === ''}
+        onClick={onSubmitHandler}
+        style={{ color: 'blue' }}
+      >
+        <FontAwesomeIcon icon={icon({ name: "arrow-left" })} />
+      </Button>
+    </form>
   );
 }
 
