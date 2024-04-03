@@ -9,18 +9,14 @@ namespace chat_app.api.Controller
     [Route("[controller]")]
     public class UsersController : Microsoft.AspNetCore.Mvc.Controller
     {
-        private readonly IChatHub _chat;
         private readonly IApplicationDBContext _db;
-        public UsersController(IChatHub chat, IApplicationDBContext db) {
-            _chat = chat;
+        public UsersController(IApplicationDBContext db) {
             _db = db;
         }
         [HttpGet("GetGroupList/{user}")]
 
         public IActionResult GetGroupList(string user)
         {
-            
-            //var result =  _chat.GetGroupList(user);
             var result = _db.connections.Where(x => x.UserId == user).ToList();
             return Ok(result);
         }

@@ -4,8 +4,6 @@ namespace chat_app.api.Utils
 {
     public static class ExtensionMethods
     {
-
-
         public static string MakeDateFormat(this DateTime dt)
         {
             var pc = new PersianCalendar();

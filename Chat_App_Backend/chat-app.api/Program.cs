@@ -1,6 +1,5 @@
 using chat_app.api.Entities;
 using chat_app.api.Hubs;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using StockApp.Trade.Core.Persistance.Context;

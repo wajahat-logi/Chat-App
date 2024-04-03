@@ -2,10 +2,7 @@
 using Microsoft.AspNetCore.SignalR;
 using chat_app.api.Utils;
 using SignalRSwaggerGen.Attributes;
-using Microsoft.AspNet.SignalR.Messaging;
 using Newtonsoft.Json;
-using System.Text.RegularExpressions;
-using chat_app.api.Controller;
 using StockApp.Trade.Core.Persistance.Context;
 
 namespace chat_app.api.Hubs
@@ -17,18 +14,12 @@ namespace chat_app.api.Hubs
         private readonly IDictionary<string, GroupConnection> _groupConnections;
         private readonly IApplicationDBContext _db;
 
-        //public ChatHub(Dictionary<string, List<string>> groupConnections)
-        //{
-        //    _groupConnections = groupConnections;
-        //}
         public ChatHub(IDictionary<string, UserConnection> userConnections, IDictionary<string, GroupConnection> groupConnections, IApplicationDBContext db)
         {
             _userConnections = userConnections;
             _groupConnections = groupConnections;
             _db = db;
         }
-
-
 
         public async Task JoinRoom(string userName)
         {
@@ -66,10 +57,6 @@ namespace chat_app.api.Hubs
                             JoinedAt =  ((DateTime)payload.joinedAt.Value).CurrentDate(),
                         });
                     }
-                    else
-                    {
-                        Console.WriteLine($"Receiver '{receiverName}' not found.");
-                    }
                 }
             }
             catch (Exception e)
@@ -84,7 +71,6 @@ namespace chat_app.api.Hubs
             {
                 dynamic payload = JsonConvert.DeserializeObject(jsonPayload);
                 string groupName = payload.receiver.Value;
-               // await Clients.Group(groupName).SendAsync("Send", $"{Context.ConnectionId} has joined the group {groupName}.")
                 await Clients.Group(groupName).SendAsync("ReceiveMessageGroup", new
                 {
                     Receiver = payload.receiver.Value,
@@ -113,22 +99,12 @@ namespace chat_app.api.Hubs
                     UserId = user,
                     Group = groupName,
                 };
-                //_groupConnections[groupName] = group;
                 _db.connections.Add(group);
                 await _db.SaveChangesAsync();
                 await Clients.Client(Context.ConnectionId).SendAsync("GroupAdded", group);
             }
         }
 
-        public async Task RemoveFromGroup(string groupName)
-        {
-            await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupName);
-
-            if (_groupConnections.ContainsKey(groupName))
-            {
-                //_groupConnections[groupName].Remove(Context.ConnectionId);
-            }
-        }
         public Task SendConnectedUsers()
         {
             return Clients.All.SendAsync("ReceiveConnectedUsers", _userConnections
@@ -138,23 +114,7 @@ namespace chat_app.api.Hubs
                     joinedAt = u.Value.JoinedAt.CurrentDate()
                 }).OrderByDescending(u => u.joinedAt));
         }
-
-
-        public async Task RefreshPage(string userName)
-        {
-            var now = DateTime.Now;
-
-            await Clients.AllExcept(Context.ConnectionId).SendAsync("ReceiveMessage", new
-            {
-                from = "",
-                text = $" \"{userName}\"",
-                sentAt = now.MakeDateFormat(),
-                isIncoming = true
-            });
-
-            await SendConnectedUsers();
-        }
-
+  
         public override Task OnDisconnectedAsync(Exception? exception)
         {
             if (_userConnections.TryGetValue(Context.ConnectionId, out var userConnection))
@@ -165,7 +125,7 @@ namespace chat_app.api.Hubs
                 {
                     from = "",
                     text = $" \"{userConnection.Name}\"",
-                    sentAt = DateTime.Now.MakeDateFormat(),
+                    sentAt = DateTime.Now.CurrentDate(),
                     isIncoming = true
                 });
 
